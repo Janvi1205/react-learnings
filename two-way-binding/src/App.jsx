@@ -13,8 +13,9 @@ const App=()=>{
                     setusername(e.target.value)
 
                 }} type="text" />
+                <button>submit</button>
             </form>
-           <button>submit</button>
+          
 
 
 
