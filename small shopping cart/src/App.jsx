@@ -1,5 +1,7 @@
 import Product from "./components/Product";
 import Nav from "./components/Nav";
+
+
 const App = () => {
   const products = [
     {
@@ -75,7 +77,6 @@ const App = () => {
           <Product name={elem.name} price={elem.price} image={elem.image} />
         ))}
       </div>
-
 
 
     </div>

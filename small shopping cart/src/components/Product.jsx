@@ -45,11 +45,14 @@ const Product = (props) => {
                     gap: "10px",
                     marginTop: "10px"
                 }}>
-                    <button onClick={decreaseQty}>-</button>
-                    <span>{quantity}</span>
-                    <button onClick={increaseQty}>+</button>
+                    <button style={{fontSize:"26px", borderRadius:"20px", width:"40px", marginRight:"30px"}} onClick={decreaseQty}>-</button>
+                    <span style={{fontSize:"26px"}}>{quantity}</span>
+                    <button style={{fontSize:"26px", borderRadius:"20px", width:"40px", marginLeft:"30px"}} onClick={increaseQty}>+</button>
                 </div>
             )}
+
+
+            
 
         </div>
 
