@@ -15,7 +15,7 @@ const Product = (props) => {
             setQuantity(0); // Go back to "Add to cart"
         } else {
             setQuantity(quantity - 1);
-        }
+        }   
     };
 
     return (
