@@ -1,16 +1,25 @@
-
-const Cart=({filteredobj})=>{
+const Cart = ({ setcartprod, cartprod }) => {
+    console.log("cartprod", cartprod);
     return (
-        <div style={{display:"flex"}}>
-            <div className="addtocartsection" >
+        <div style={{ display: "flex" }}>
+            <div className="addtocartsection">
+                {cartprod.map((item) => {
+                    return (
+                        <div key={item.id} style={{ height: "300px", backgroundColor: "white", width: "300px" }}>
+                            <img src={item.image} alt="" />
+                            <div>
+                                <h1>{item.name}</h1>
+                                
+                            </div>
+                            
+                        </div>
+                    );
+                })}
 
-            </div>
-            <div className="addtocartsection2">
-                <h1 style={{fontSize:"40px",color:"white",fontFamily:"Arial", justifyContent:"center",display:"flex"}}>Total</h1>
-   
+
             </div>
         </div>
-      
-    )
-}
+    );
+};
+
 export default Cart;
