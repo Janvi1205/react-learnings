@@ -1,8 +1,12 @@
-const Cart=()=>{
+
+const Cart=({filteredobj})=>{
     return (
         <div>
-            didsji
+            <div style={{height:"200px"}}>
+
+            </div>
         </div>
+      
     )
 }
 export default Cart;

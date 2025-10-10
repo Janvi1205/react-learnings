@@ -10,7 +10,8 @@ const App = () => {
 
   const [addedproduct,setproduct]=useState('');
    
-  const filteredobj=products.filter((prod)=>{prod.id==addedproduct});
+  const filteredobj=products.filter((prod)=>prod.id==addedproduct);
+
  
 
   return (
@@ -20,11 +21,12 @@ const App = () => {
    
       <Routes>
           <Route path="/" element={<Product setproduct={setproduct} />} />
-          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/cart" element={<Cart filteredobj={filteredobj} />}/>
       </Routes>  
 
     
     </div>
+    
 
 
   ); 
