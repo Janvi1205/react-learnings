@@ -29,6 +29,7 @@ button:active{
   background-color:wheat;
   margin-left:60px;
   border-radius: 40PX;
+ 
 }
 
 .addtocartsection2{
@@ -39,3 +40,28 @@ button:active{
   margin-left: 40px;
 
 }
+.inc{
+  border: 2px solid black;
+  padding: 5px;
+  margin-left: 40px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  
+}
+.dec{
+  border: 2px solid black;
+  padding: 6px;
+   padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px; 
+  margin-left: 40px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  font-size: 25px;
+  
+}
+
+
