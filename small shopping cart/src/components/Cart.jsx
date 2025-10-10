@@ -6,7 +6,7 @@ const Cart = ({ setcartprod, cartprod }) => {
             <div className="addtocartsection">
                 {cartprod.map((item) => {
                     return (
-                        <div key={item.id} style={{backgroundColor: "white", width: "850px",display:"flex",marginTop:"45px",marginLeft:"75px",borderRadius:"40px" }}>
+                        <div key={item.id} style={{ height: "300px", backgroundColor: "white", width: "850px",display:"flex",marginTop:"45px",marginLeft:"75px",borderRadius:"40px" }}>
                             <img style={{height:"220px",width:"250px",marginTop:"35px",marginLeft:"20px"}} src={item.image} alt="" />
                             <div>
                                 <h1 style={{fontFamily:"Arial",marginLeft:"40px",marginTop:"40px",fontSize:"40px"}}>{item.name}</h1>
