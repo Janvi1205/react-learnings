@@ -1,6 +1,25 @@
+import { useState } from "react";
 import { MdDelete } from "react-icons/md";
 const Cart = ({ setcartprod, cartprod }) => {
     console.log("cartprod", cartprod);
+
+    const [count,setcount]=useState(1);
+    function incqty()
+    {
+        setcount(count+1)
+
+    }
+   
+    function decqty()
+    {
+        if(count>1)
+        {
+            setcount(count-1)
+        }
+
+    }
+
+    
     return (
         <div style={{ display: "flex" }}>
             <div className="addtocartsection">
@@ -10,17 +29,17 @@ const Cart = ({ setcartprod, cartprod }) => {
                             <img style={{height:"220px",width:"250px",marginTop:"35px",marginLeft:"20px"}} src={item.image} alt="" />
                             <div>
                                 <h1 style={{fontFamily:"Arial",marginLeft:"40px",marginTop:"40px",fontSize:"40px"}}>{item.name}</h1>
-                                <h2 style={{fontSize:"25px",fontFamily:"Arial",marginLeft:"40px"}}>Price:</h2>
+                                <h2 style={{fontSize:"25px",fontFamily:"Arial",marginLeft:"40px"}}>Price:{item.price*count}</h2>
                                 
-                                <button className="inc">+</button>
-                                <span style={{fontSize:"25px",marginLeft:"30px"}}> 1</span>
-                                <button className="dec">-</button>
+                                <button   onClick={decqty} className="dec">-</button>
+                                <span style={{fontSize:"25px",marginLeft:"30px"}}>{count}</span>
+                                <button onClick={incqty}  className="inc">+</button>
+                                <button style={{backgroundColor:"red",border:"none",padding:"7px",fontSize:"30px",marginLeft:"280px",marginTop:"30px",borderRadius:"10px"}}><MdDelete /></button>
+
                                 
 
                             </div>
-                            <div>
-                                <button style={{backgroundColor:"red",border:"none",padding:"7px",fontSize:"30px",marginLeft:"280px",marginTop:"30px",borderRadius:"10px"}}><MdDelete /></button>
-                            </div>
+                          
                             
                         </div>
                     );
