@@ -7,9 +7,7 @@ const Product = ({setproduct}) => {
     function addtocart(id){
 
        setproduct(id);
-    
 
-       
     }
 
     return (
