@@ -16,9 +16,6 @@ const App = () => {
       setcartprod([...cartprod,...filteredobj])
   },[addedproduct])
    
-
- 
-
   return (
     <div>
       <Nav/>
