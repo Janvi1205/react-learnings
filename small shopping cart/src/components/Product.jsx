@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { products } from "../../data";
 
 
 const Product = ({setproduct}) => {
 
-
+    const [added, setAdded] = useState([]);
     function addtocart(id){
 
        setproduct(id);
+       setAdded((prev) => [...prev, id]); 
 
     }
 
@@ -19,12 +21,39 @@ const Product = ({setproduct}) => {
                     <h1 style={{ fontSize: "30px", fontFamily: "Arial" }}>{item.name}</h1>
                     <h2>Price:{item.price}</h2>
 
+                    {added.includes(item.id) ? (
+            <button
+              style={{
+                backgroundColor: "gray",
+                color: "white",
+                padding: "10px",
+                width: "140px",
+                borderRadius: "20px",
+              }}
+            >
+              Added
+            </button>
+          ) : (
+            <button
+              onClick={() => addtocart(item.id)}
+              style={{
+                backgroundColor: "black",
+                color: "white",
+                padding: "10px",
+                width: "140px",
+                borderRadius: "20px",
+                cursor: "pointer",
+              }}
+            >
+              Add to cart
+            </button>
+          )}
+
+
+
                     
 
-                    <button  onClick={()=>addtocart(item.id)} style={{ backgroundColor: "black", color: "white", padding: "10px", width: "140px", borderRadius: "20px", cursor: "pointer" }}>
-                        Add to cart
-                    </button>
-
+                    
 
                     
 
@@ -41,3 +70,6 @@ const Product = ({setproduct}) => {
     )
 }
 export default Product;
+
+
+
