@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { products } from "../../data";
-
-
 const Product = ({setproduct}) => {
 
     const [added, setAdded] = useState([]);
@@ -11,7 +9,6 @@ const Product = ({setproduct}) => {
        setAdded((prev) => [...prev, id]); 
 
     }
-
     return (
         <div>
             {products.map((item) => (
@@ -49,24 +46,11 @@ const Product = ({setproduct}) => {
             </button>
           )}
 
-
-
-                    
-
-                    
-
-                    
-
                 </div>
 
             ))}
 
         </div>
-
-
-
-
-
     )
 }
 export default Product;
