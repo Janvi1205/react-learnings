@@ -1,5 +1,5 @@
 import { MdDelete } from "react-icons/md";
-const Cart = ({ setcartprod, cartprod }) => {
+const Cart = ({ setcartprod, cartprod, isDark }) => {
     console.log("cartprod", cartprod);
 
 
@@ -35,7 +35,7 @@ const Cart = ({ setcartprod, cartprod }) => {
     return (
         <div >
             {cartprod.length === 0 ? (
-                <div style={{color:"white",fontSize:"45px",marginLeft:"650px",marginTop:"250px"}}>Oops!No item in cart...</div>
+                <div style={{color: isDark ? "white" : "black",fontSize:"45px",marginLeft:"650px",marginTop:"250px"}}>Oops!No item in cart...</div>
 
             ) : (
                 <div style={{ display: "flex" }}>
