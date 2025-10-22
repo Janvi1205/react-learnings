@@ -1,6 +1,15 @@
 import { MdDelete } from "react-icons/md";
+import { useEffect } from "react";
+
 const Cart = ({ setcartprod, cartprod, isDark }) => {
     console.log("cartprod", cartprod);
+
+
+
+    useEffect(() => {
+        localStorage.setItem("cartData", JSON.stringify(cartprod));
+    }, [cartprod]);//Runs every time your cart updates.
+
 
 
     function incqty(id) {
@@ -35,7 +44,7 @@ const Cart = ({ setcartprod, cartprod, isDark }) => {
     return (
         <div >
             {cartprod.length === 0 ? (
-                <div style={{color: isDark ? "white" : "black",fontSize:"45px",marginLeft:"650px",marginTop:"250px"}}>Oops!No item in cart...</div>
+                <div style={{ color: isDark ? "white" : "black", fontSize: "45px", marginLeft: "650px", marginTop: "250px" }}>Oops!No item in cart...</div>
 
             ) : (
                 <div style={{ display: "flex" }}>
