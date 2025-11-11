@@ -12,7 +12,8 @@ const App=()=>{
                   onChange={(e)=>{
                     setusername(e.target.value)
 
-                }} type="text" />
+                }}
+                 type="text" />
                 <button>submit</button>
             </form>
           
