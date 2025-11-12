@@ -47,9 +47,7 @@ const App = () => {
 
   return (
     <div>
-      {/* <div>
-        <button onClick={getdata} style={{ backgroundColor: "teal", color: "white", padding: "20px", border: "none" }}>Get data</button>
-      </div> */}
+      
       <div style={{ height:"630px", display: "flex", flexWrap: "wrap", gap: "30px", justifyContent: "center", marginTop: "30px" }} >
         {printdata}
 
