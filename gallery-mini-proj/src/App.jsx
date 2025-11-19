@@ -1,11 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import {gsap} from "gsap";
 
 
 const App = () => {
 
+  useEffect(() => {
+    gsap.to("body", {
+      "--c1": "#34ace0",
+      "--c2": "#ffb142",
+      duration: 4,
+      repeat: -1,
+      yoyo: true
+    });
+  }, []);
 
-   const [indx, setindx] = useState(1)
+  const [indx, setindx] = useState(1)
   const [userdata, setuserdata] = useState([])
   useEffect(function () {
     getdata()
@@ -21,7 +31,7 @@ const App = () => {
   let printdata = <div style={{ fontSize: "50px", color: "white", marginTop: "230px" }}>Loading </div>
 
   if (userdata.length > 0) {
-    printdata = userdata.map((elem, key) => {
+    printdata = userdata.map((elem) => {
       return <div>
         <img style={{ height: "240px", width: "240px", borderRadius: "20px" }} src={elem.download_url} alt="" />
 
@@ -47,21 +57,16 @@ const App = () => {
 
   return (
     <div>
-      
       <div style={{ height:"630px", display: "flex", flexWrap: "wrap", gap: "30px", justifyContent: "center", marginTop: "30px" }} >
         {printdata}
 
       </div>
       <div style={{width:"220px", display:"flex", justifyContent:"space-between", marginTop:"50px", marginLeft:"740px" }}>
-        <button onClick={prev} style={{ backgroundColor: indx === 1 ? "gray" : "goldenrod", border:"none", padding:"20px"}}>PREV</button>
+        <button onClick={prev} style={{ backgroundColor: indx === 1 ? "gray" : "black",color:"white", border:"none", padding:"20px"}}>PREV</button>
         <span style={{color:"white", marginTop:"20px"}}>Page {indx}</span>
-        <button onClick={next} style={{backgroundColor:"goldenrod", border:"none", padding:"20px"}}>NEXT</button>
+        <button onClick={next} style={{backgroundColor:"black", border:"none", padding:"20px",color:"white"}}>NEXT</button>
       </div>
     </div>
-
- 
-
-
 
   )
 }

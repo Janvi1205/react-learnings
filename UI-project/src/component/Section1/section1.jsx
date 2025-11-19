@@ -9,8 +9,6 @@ const section1=(props)=>{
             <div className="flex justify-between">
                 <TXTcenter/>
                 <ImgCenter prop={props.reviews}/>
-
-
             </div>
         </div>
 
