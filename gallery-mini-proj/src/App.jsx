@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {gsap} from "gsap";
+import {gsap} from "gsap";   //here in react gsap is first insatlled using npm install gsap and then imported here
 
 
 const App = () => {

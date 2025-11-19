@@ -1,6 +1,6 @@
-body,html{
-  margin: 0px;
-  padding:0px;
+body{
+  
+
    background: linear-gradient(135deg, var(--c1), var(--c2));
   --c1: #ff6b6b;
   --c2: #5f27cd;
