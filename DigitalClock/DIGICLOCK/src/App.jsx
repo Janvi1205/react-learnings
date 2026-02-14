@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import{ useEffect, useState } from 'react'
 
 const App = () => {
 
@@ -9,8 +9,6 @@ const App = () => {
        const interval= setInterval(()=>{
         const now= new Date();
         setTime(now.toLocaleTimeString())
-        
-        
       },1000)
       return ()=>{clearInterval(interval)}
     
@@ -18,7 +16,7 @@ const App = () => {
 
 
   return (
-    <div>
+    <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center",width:"100vw"}}>
       <div>DigiClock</div>
       <div>
 

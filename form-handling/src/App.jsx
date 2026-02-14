@@ -1,30 +1,49 @@
 import { useState } from "react";
 
-const App=()=>{
-  const[username,setusername]=useState('')
-  const formhandle=(e)=>{
-    e.preventDefault()
-    console.log(username)
-    setusername("")
+const App = () => {
+
+
+   const [formdata,setformdata]=useState({
+    name:"",
+    password:""
+   })
+
+   const handelchange=(e)=>{
+     const {name,value}=e.target;
+
+     setformdata((prev)=>({
+       ...prev,
+      [name]:value
+     }))
+
+   }
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+
+    setformdata({
+      name:"",
+      password:""
+    })
+    console.log(formdata.name,formdata.password)  
 
   }
-  return(
+  return (
     <div>
-      <form onSubmit={(e)=>{
-        formhandle(e)
-      }}>
-        <input
-        value={username}
-        onChange={(e)=>{
-         
-          setusername(e.target.value)
-        }}
-         type="text" />
-          <button>submit</button>
-      </form>
-     
+      <div>Form</div>
+      <div>
+        <form onSubmit={handleSubmit} style={{display:"flex",flexDirection:"column"}} action="">
 
+           <input onChange={handelchange} value={formdata.name} type="text" name="name"  />
+
+           <input onChange={handelchange} value={formdata.password} name="password" type="password"  />
+
+           <button>Submit</button>
+
+        </form>
+      </div>
     </div>
   )
 }
-export default App;
+
+export default App
